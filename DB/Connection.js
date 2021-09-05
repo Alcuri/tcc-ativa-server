@@ -1,13 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config();
 
-const URI = "mongodb+srv://elias:elias@cluster0.rm3ns.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const URI = process.env.MONGO_URI || "";
 
-const connectDB = async()=>{
-  await  mongoose.connect(URI, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true
-    });
-  console.log('db connected');
-}
+const connectDB = async () => {
+  await mongoose.connect(URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  });
+  console.log("db connected");
+};
 
 module.exports = connectDB;
