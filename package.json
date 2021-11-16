@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "aws-sdk": "^2.776.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt": "^5.0.0",
     "bluebird": "^3.7.2",
     "cors": "^2.8.5",
